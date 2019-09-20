@@ -1,7 +1,7 @@
 <h1>Student Form</h1>
-<% if @student %>
-  <%= content_tag(:p, "First name: #{@student.first_name}  Last name: #{@student.last_name}") %>
-<% end %>
+
+<%= session[:student] if session[:student] %>
+
 <%= form_tag students_path do %>
   <label>First name:</label><br>
   <%= text_field_tag :"student[first_name]" %><br>
